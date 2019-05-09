@@ -1,0 +1,93 @@
+---
+title: "Myfirstmarkdown"
+author: "周義興"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars,comment=NA}
+summary(cars)
+n=dim(cars[1:25,])[1]
+n
+```
+The sample size is `r n` .
+
+$Y=\beta_0+\beta_1x$
+$$Y=\beta_0+\beta_1x$$  <!-- 獨立段落 -->
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+*italic*   **bold**
+
+_italic_   __bold__
+
+* Item 1
+* Item 2
+    + Item 2a
+    + Item 2b
+    
+![sea](https://www.penghu-nsa.gov.tw/FileDownload/Album/Big/20161012170524071364072.jpg)
+
+> It's always better to give
+
+
+<!--框框 -->
+``` 
+This text is displayed verbatim / preformatted
+```
+
+<!--表格 -->
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+<!--反黑 -->
+`plot()`
+
+<!--chuck -->
+```{r}
+paste("Hello", "World!")
+```
+
+
+```{r,fig.align='center',fig.height=5}
+plot(pressure)
+```
+
+<!--echo=FALSE 藏程式碼 -->
+```{r,echo=FALSE}
+paste("Hello", "World!")
+```
+
+<!--eval=FALSE 不執行程式碼 -->
+```{r,eval=FALSE}
+paste("Hello", "World!")
+```
+
+```{r,out.width='50%',fig.show='hold'}
+x=rnorm(100)
+hist(x)
+y=rnorm(100)
+hist(y)
+```
+
+
+
